@@ -19,6 +19,7 @@ driver.get(url)
 driver.implicitly_wait(3)
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
+print(soup)
 notices = soup.select('div.p_inr > div.p_info > a > span')
 
 for n in notices:
